@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Departments | VisionCare Eye Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        .dept-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .dept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        .dept-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+            background: var(--bg-light);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .dept-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        .dept-desc {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-lg);
+        }
+        .dept-link {
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    
+
+        <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="page-header fade-in">
+        <div class="container">
+            <h1 class="section-title">Centers of Excellence</h1>
+            <p class="section-subtitle">Our specialized departments feature leading experts and state-of-the-art facilities dedicated to specific areas of eye health.</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="departments-grid">
+            
+            <div class="dept-card fade-in">
+                <div class="dept-icon">👁️</div>
+                <div>
+                    <h3 class="dept-title">Cataract Department</h3>
+                    <p class="dept-desc">World-class micro-incision cataract surgery (MICS) and premium intraocular lens services providing seamless visual rehabilitation.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">🎯</div>
+                <div>
+                    <h3 class="dept-title">Retina & Vitreous</h3>
+                    <p class="dept-desc">Specialized care for diabetic retinopathy, age-related macular degeneration, and complex retinal detachment surgeries.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">⚡</div>
+                <div>
+                    <h3 class="dept-title">Refractive Surgery (LASIK)</h3>
+                    <p class="dept-desc">Advanced laser vision correction offering blade-free LASIK, PRK, and SMILE procedures to eliminate the need for glasses.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">👶</div>
+                <div>
+                    <h3 class="dept-title">Pediatric Ophthalmology</h3>
+                    <p class="dept-desc">Dedicated, child-friendly care specializing in strabismus (squint), lazy eye treatments, and myopia progression control.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">🔬</div>
+                <div>
+                    <h3 class="dept-title">Glaucoma Center</h3>
+                    <p class="dept-desc">Early detection, advanced visual field testing, medical management, and minimally invasive glaucoma surgeries (MIGS).</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">🛡️</div>
+                <div>
+                    <h3 class="dept-title">Cornea & External Disease</h3>
+                    <p class="dept-desc">Comprehensive diagnostics and treatments for keratoconus, severe dry eye, corneal infections, and corneal transplantations.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">🧠</div>
+                <div>
+                    <h3 class="dept-title">Neuro-Ophthalmology</h3>
+                    <p class="dept-desc">Expert evaluation of complex visual problems related to the nervous system, including optic neuritis and unexplained vision loss.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+            <div class="dept-card fade-in">
+                <div class="dept-icon">🎭</div>
+                <div>
+                    <h3 class="dept-title">Oculoplasty</h3>
+                    <p class="dept-desc">Reconstructive and cosmetic eyelid surgery, tear duct treatments, and orbital disease management.</p>
+                </div>
+                <a href="services.html" class="dept-link">Explore Department →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Specialized Care Pathway -->
+    <section class="care-pathway-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container text-center fade-in">
+            <h2 class="section-title" style="color: white;">Specialized Care Pathway</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">Our departments work seamlessly together to provide comprehensive, multi-disciplinary care for complex eye conditions.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-md); align-items: center;">
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">General OPD</div>
+                <div style="color: var(--primary-light);">→</div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Diagnostic Imaging</div>
+                <div style="color: var(--primary-light);">→</div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Specialty Department</div>
+                <div style="color: var(--primary-light);">→</div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Surgical & Recovery Team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Facilities & Expertise -->
+    <section class="facilities-expertise-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container fade-in">
+            <h2 class="section-title text-center">Department Facilities & Expertise</h2>
+            <div class="responsive-grid">
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Dedicated Laser Suites</h3>
+                    <p style="color: var(--text-dark);">Equipped with excimer and femtosecond lasers for precision refractive procedures.</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Pediatric Play Areas</h3>
+                    <p style="color: var(--text-dark);">Child-friendly waiting and consultation rooms designed to reduce anxiety.</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Retina Treatment Center</h3>
+                    <p style="color: var(--text-dark);">Advanced imaging and intravitreal injection suites for immediate care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors & Specialists | VisionCare Eye Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .doctors-filter {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            color: var(--text-dark);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .doctors-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        .doc-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .doc-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+        }
+        .doc-content {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .doc-name {
+            font-size: 1.4rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        .doc-specialty {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+        .doc-qualifications {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: var(--spacing-md);
+        }
+        .doc-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: var(--spacing-md);
+        }
+        .doc-actions .btn {
+            flex: 1;
+            padding: 0.6rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    
+
+        <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="page-header fade-in">
+        <div class="container">
+            <h1 class="section-title">Meet Our Specialists</h1>
+            <p class="section-subtitle">Our team of internationally renowned ophthalmologists are dedicated to providing the highest standard of care.</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <!-- Simple pure JS filter setup -->
+        <div class="doctors-filter fade-in">
+            <button class="filter-btn active" data-filter="all">All Specialists</button>
+            <button class="filter-btn" data-filter="cataract">Cataract</button>
+            <button class="filter-btn" data-filter="retina">Retina</button>
+            <button class="filter-btn" data-filter="pediatric">Pediatric</button>
+            <button class="filter-btn" data-filter="glaucoma">Glaucoma</button>
+        </div>
+
+        <div class="responsive-grid">
+            <!-- Doctor 1 -->
+            <div class="doc-card fade-in" data-category="cataract">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Dr. Sarah Johnson" class="doc-img">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. Sarah Johnson</h3>
+                    <div class="doc-specialty">Senior Cataract & LASIK Surgeon</div>
+                    <div class="doc-qualifications">MD, FRCS (Ophthalmology) • 15+ Years Exp</div>
+                    <p>Specializes in complex cataract surgeries and premium intraocular lens implantation.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doc-card fade-in" data-category="retina">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400" alt="Dr. Michael Chen" class="doc-img">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. Michael Chen</h3>
+                    <div class="doc-specialty">Head of Vitreoretinal Surgery</div>
+                    <div class="doc-qualifications">MD, PhD • 12+ Years Exp</div>
+                    <p>Expert in surgical and medical management of retinal and macular diseases.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="doc-card fade-in" data-category="pediatric">
+                <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg" alt="Dr. Emily Davis" class="doc-img">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. Emily Davis</h3>
+                    <div class="doc-specialty">Pediatric Ophthalmologist</div>
+                    <div class="doc-qualifications">DO, Fellowship in Pediatric Ophthal • 10+ Years Exp</div>
+                    <p>Dedicated to pediatric eye care, specializing in strabismus and myopia control.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Doctor 4 -->
+            <div class="doc-card fade-in" data-category="glaucoma">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400" alt="Dr. Robert Wilson" class="doc-img">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. Robert Wilson</h3>
+                    <div class="doc-specialty">Glaucoma Specialist</div>
+                    <div class="doc-qualifications">MD, MS Ophthalmology • 20+ Years Exp</div>
+                    <p>Pioneer in minimally invasive glaucoma surgeries (MIGS) and medical management.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="doc-card fade-in" data-category="cataract">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127d0fc?auto=format&fit=crop&q=80&w=400" alt="Dr. James Smith" class="doc-img">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. James Smith</h3>
+                    <div class="doc-specialty">Cornea & Refractive Surgeon</div>
+                    <div class="doc-qualifications">MD, FACS • 18+ Years Exp</div>
+                    <p>Specialist in advanced corneal transplants and comprehensive refractive laser surgeries.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="doc-card fade-in" data-category="retina">
+                <img src="https://images.unsplash.com/photo-1594824436998-d40d9af77840?auto=format&fit=crop&q=80&w=400" alt="Dr. Linda Martinez" class="doc-img" onerror="this.src='https://images.unsplash.com/photo-1590611936760-eeb9bcabe24c?auto=format&fit=crop&q=80&w=400';">
+                <div class="doc-content">
+                    <h3 class="doc-name">Dr. Linda Martinez</h3>
+                    <div class="doc-specialty">Medical Retina Specialist</div>
+                    <div class="doc-qualifications">MD, Fellowship in Medical Retina • 14+ Years Exp</div>
+                    <p>Expert in diabetic eye disease and age-related macular degeneration management.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline">Profile</button>
+                        <a href="book.html" class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Medical Team -->
+    <section class="medical-team-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container text-center fade-in">
+            <h2 class="section-title">Meet Our Medical Team</h2>
+            <p style="color: var(--text-dark); max-width: 700px; margin: 0 auto var(--spacing-xl);">Our board-certified ophthalmologists bring decades of combined experience, specialized fellowship training, and a dedication to advancing eye care through clinical excellence and research.</p>
+            <div class="responsive-grid">
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 5px;">15+</h3>
+                    <p style="font-weight: 500; margin: 0;">Board-Certified Specialists</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 5px;">100%</h3>
+                    <p style="font-weight: 500; margin: 0;">Fellowship Trained</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 5px;">50+</h3>
+                    <p style="font-weight: 500; margin: 0;">Years Combined Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Consultation Process -->
+    <section class="consultation-process-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container fade-in">
+            <h2 class="section-title text-center" style="color: white;">Doctor Consultation Process</h2>
+            <div class="responsive-grid">
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">1. Medical History</h3>
+                    <p style="color: rgba(255,255,255,0.8);">Your doctor will thoroughly review your complete medical history and current symptoms.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">2. Comprehensive Exam</h3>
+                    <p style="color: rgba(255,255,255,0.8);">A detailed physical examination of your eyes using our state-of-the-art diagnostic equipment.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">3. Care Plan</h3>
+                    <p style="color: rgba(255,255,255,0.8);">You will receive a detailed explanation of your condition and a personalized treatment strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple filtering logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const docCards = document.querySelectorAll('.doc-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add to clicked
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    docCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => card.style.opacity = '1', 50);
+                        } else {
+                            card.style.opacity = '0';
+                            setTimeout(() => card.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

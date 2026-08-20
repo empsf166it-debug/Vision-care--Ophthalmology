@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Resources | VisionCare Eye Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .resources-layout {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: var(--spacing-xxl);
+            margin-top: var(--spacing-xl);
+            align-items: start;
+        }
+        .resources-nav {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-md) 0;
+            position: sticky;
+            top: 100px;
+        }
+        .resources-nav a {
+            display: block;
+            padding: 12px var(--spacing-lg);
+            color: var(--text-dark);
+            font-weight: 500;
+            border-left: 3px solid transparent;
+        }
+        .resources-nav a:hover, .resources-nav a.active {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+        }
+        .resource-section {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-sm);
+        }
+        .resource-section h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
+            margin-bottom: var(--spacing-lg);
+        }
+        .resource-list {
+            list-style: none;
+        }
+        .resource-list li {
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .resource-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--spacing-md) 0;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .faq-a { color: var(--text-light); }
+        
+        @media (max-width: 900px) {
+            .resources-layout { grid-template-columns: 1fr; }
+            .resources-nav { position: static; display: flex; flex-wrap: wrap; }
+            .resources-nav a { border-left: none; border-bottom: 3px solid transparent; }
+            .resources-nav a:hover, .resources-nav a.active { border-left-color: transparent; border-bottom-color: var(--primary-color); }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    
+
+        <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="page-header fade-in">
+        <div class="container">
+            <h1 class="section-title">Patient Resources</h1>
+            <p class="section-subtitle">Everything you need to know before, during, and after your visit to VisionCare Eye Hospital.</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="resources-layout">
+            
+            <aside class="resources-nav fade-in">
+                <a href="#appointment" class="active">Before Your Appointment</a>
+                <a href="#preparation">Surgery Preparation</a>
+                <a href="#post-care">Post-Surgery Care</a>
+                <a href="#insurance">Insurance & Payment</a>
+                <a href="#faq">Frequently Asked Questions</a>
+            </aside>
+
+            <div class="resources-content">
+                
+                <div id="appointment" class="resource-section fade-in">
+                    <h2>Before Your Appointment</h2>
+                    <p>To ensure a smooth and efficient consultation, please prepare the following:</p>
+                    <br>
+                    <ul class="resource-list">
+                        <li>Bring your current eyeglasses and contact lenses.</li>
+                        <li>Bring a list of all current medications, including eye drops.</li>
+                        <li>Bring a valid photo ID and your insurance card.</li>
+                        <li>Arrange for a driver, as your eyes may be dilated during the exam, causing temporary blurriness.</li>
+                    </ul>
+                </div>
+
+                <div id="preparation" class="resource-section fade-in">
+                    <h2>Surgery Preparation</h2>
+                    <p>If you are scheduled for an eye surgery (such as Cataract or LASIK), follow these guidelines:</p>
+                    <br>
+                    <ul class="resource-list">
+                        <li>Stop wearing contact lenses 1-2 weeks before your pre-op measurements, as directed by your doctor.</li>
+                        <li>Do not apply makeup, lotions, or perfumes on the day of surgery.</li>
+                        <li>Wear comfortable, loose-fitting clothing.</li>
+                        <li>Follow specific fasting guidelines provided by the surgical coordinator if general anesthesia is used.</li>
+                    </ul>
+                </div>
+
+                <div id="post-care" class="resource-section fade-in">
+                    <h2>Post-Surgery Care & Medication</h2>
+                    <p>Proper post-operative care is critical for healing. Your specific instructions may vary, but generally:</p>
+                    <br>
+                    <ul class="resource-list">
+                        <li>Use prescribed eye drops exactly as scheduled. Do not skip doses.</li>
+                        <li>Wear the protective eye shield while sleeping for the first week.</li>
+                        <li>Avoid rubbing or pressing on your eye.</li>
+                        <li>Avoid strenuous activities, heavy lifting, and swimming for at least 2 weeks.</li>
+                        <li>Attend all scheduled follow-up appointments.</li>
+                    </ul>
+                </div>
+
+                <div id="insurance" class="resource-section fade-in">
+                    <h2>Insurance & Payment Information</h2>
+                    <p>VisionCare partners with major medical insurance providers. Please note:</p>
+                    <br>
+                    <ul class="resource-list">
+                        <li>We accept Medicare, Medicaid, and most private health insurance plans.</li>
+                        <li>Co-pays and deductibles are due at the time of service.</li>
+                        <li>For elective procedures like LASIK, we offer flexible financing options.</li>
+                        <li>Please call our billing department at +1 (800) 123-4567 for specific coverage inquiries.</li>
+                    </ul>
+                </div>
+
+                <div id="faq" class="resource-section fade-in">
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">How long does a comprehensive eye exam take?</div>
+                        <div class="faq-a">A comprehensive exam usually takes between 45 minutes to 1.5 hours, depending on whether your eyes need to be dilated.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">Is cataract surgery painful?</div>
+                        <div class="faq-a">No. The procedure is performed under local anesthesia (numbing drops). You may feel mild pressure, but it is not painful.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">Can I drive myself home after dilation?</div>
+                        <div class="faq-a">Dilation makes your eyes sensitive to light and blurs near vision for 2-4 hours. We strongly recommend having someone drive you home.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">How soon can I return to work after LASIK?</div>
+                        <div class="faq-a">Most patients achieve excellent vision within 24 hours and can return to work the very next day.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Patient Guidelines -->
+    <section class="patient-guidelines-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container fade-in">
+            <h2 class="section-title text-center" style="color: white;">Essential Patient Guidelines</h2>
+            <div class="responsive-grid">
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Pre-Op Instructions</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">Important steps to take before your scheduled surgery.</p>
+                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Post-Op Care Guide</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">How to ensure a smooth and safe recovery process.</p>
+                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">New Patient Forms</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">Save time by filling out your history forms in advance.</p>
+                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container fade-in">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: var(--spacing-xl) auto 0; display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Do I need a referral to book an appointment?</h4>
+                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">No, you can book an appointment directly. However, if you're using insurance, please check your provider's requirements.</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">How long does a comprehensive eye exam take?</h4>
+                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">Please allow 1 to 1.5 hours for a comprehensive exam, as we may need to dilate your pupils.</p>
+                </div>
+                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
+                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Will I be able to drive after my appointment?</h4>
+                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">If your eyes are dilated during the exam, your vision will be blurry and light-sensitive. We strongly recommend having someone drive you home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple smooth scrolling and active state for side nav
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.resources-nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

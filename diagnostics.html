@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Services | VisionCare Eye Hospital</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .diagnostics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .diag-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .diag-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .diag-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .diag-content {
+            padding: var(--spacing-lg);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .diag-title {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+
+        .diag-desc {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            flex: 1;
+        }
+
+        .diag-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            align-self: flex-start;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+
+
+    <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="page-header fade-in">
+        <div class="container">
+            <h1 class="section-title">Advanced Diagnostics</h1>
+            <p class="section-subtitle">Accurate diagnosis is the foundation of effective treatment. We utilize the
+                latest imaging and testing technology.</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="diagnostics-grid">
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/5765829/pexels-photo-5765829.jpeg" alt="OCT Scan"
+                    class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">Retina Imaging</span>
+                    <h3 class="diag-title">OCT Scan</h3>
+                    <p class="diag-desc">Optical Coherence Tomography (OCT) is a non-invasive imaging test that uses
+                        light waves to take cross-section pictures of your retina, crucial for diagnosing glaucoma and
+                        macular degeneration.</p>
+                </div>
+            </div>
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/5996650/pexels-photo-5996650.jpeg" alt="Corneal Topography"
+                    class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">Cornea Analysis</span>
+                    <h3 class="diag-title">Corneal Topography</h3>
+                    <p class="diag-desc">A computer-assisted diagnostic tool that creates a 3D map of the surface
+                        curvature of the cornea. Essential for LASIK evaluation and keratoconus diagnosis.</p>
+                </div>
+            </div>
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/5996608/pexels-photo-5996608.jpeg" alt="Visual Field Test"
+                    class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">Glaucoma Testing</span>
+                    <h3 class="diag-title">Visual Field Test</h3>
+                    <p class="diag-desc">Measures the entire scope of your vision, including peripheral (side) vision.
+                        It helps our doctors map vision loss caused by glaucoma or neurological diseases.</p>
+                </div>
+            </div>
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/5765830/pexels-photo-5765830.jpeg" alt="Fundus Photography"
+                    class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">Retina Imaging</span>
+                    <h3 class="diag-title">Fundus Photography</h3>
+                    <p class="diag-desc">Captures highly detailed photographs of the back of the eye (fundus) to monitor
+                        changes in the optic nerve, macula, and retinal blood vessels.</p>
+                </div>
+            </div>
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/8875643/pexels-photo-8875643.jpeg"
+                    alt="Digital Eye Screening" class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">General Checkup</span>
+                    <h3 class="diag-title">Digital Eye Screening</h3>
+                    <p class="diag-desc">Comprehensive auto-refraction and digital screening to determine your exact
+                        prescription and screen for common ocular abnormalities.</p>
+                </div>
+            </div>
+
+            <div class="diag-card fade-in">
+                <img src="https://images.pexels.com/photos/8875641/pexels-photo-8875641.jpeg" alt="Eye Pressure Test"
+                    class="diag-img">
+                <div class="diag-content">
+                    <span class="diag-tag">Tonometry</span>
+                    <h3 class="diag-title">Eye Pressure Test</h3>
+                    <p class="diag-desc">Fast, painless measurement of intraocular pressure (IOP) using non-contact
+                        tonometry to check for signs of glaucoma.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Advanced Diagnostic Technology -->
+    <section class="diagnostic-tech-section"
+        style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container text-center fade-in">
+            <h2 class="section-title" style="color: white;">Advanced Diagnostic Technology</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">We invest in
+                the latest ophthalmic imaging technology to provide unparalleled accuracy in our diagnoses.</p>
+            <div class="responsive-grid">
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">OCT Angiography</h3>
+                    <p style="font-size: 0.9rem;">Non-invasive 3D imaging of retinal blood vessels.</p>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Pentacam HR</h3>
+                    <p style="font-size: 0.9rem;">High-resolution imaging for precise corneal topography.</p>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Visual Field Analyzer</h3>
+                    <p style="font-size: 0.9rem;">Advanced testing for glaucoma and neurological conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Eye Screening Journey -->
+    <section class="screening-journey-section"
+        style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container fade-in">
+            <h2 class="section-title text-center">Your Eye Screening Journey</h2>
+            <div class="responsive-grid">
+                <div
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Step 1: Visual Acuity Testing</h3>
+                    <p style="color: var(--text-dark);">We measure how clearly you can see at different distances using
+                        digital charts.</p>
+                </div>
+                <div
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Step 2: Intraocular Pressure</h3>
+                    <p style="color: var(--text-dark);">A quick and painless test to measure the fluid pressure inside
+                        your eyes.</p>
+                </div>
+                <div
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-color);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Step 3: Retinal Imaging</h3>
+                    <p style="color: var(--text-dark);">Detailed photographs and scans of the back of your eye to detect
+                        subtle changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

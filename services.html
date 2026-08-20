@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Care Services | VisionCare Eye Hospital</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .service-content .btn {
+            margin-top: auto !important;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+            color: var(--text-light);
+        }
+
+        .service-features li {
+            margin-bottom: var(--spacing-xs);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+
+
+    <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="page-header fade-in">
+        <div class="container">
+            <h1 class="section-title">Specialized Eye Care Services</h1>
+            <p class="section-subtitle">Comprehensive treatments and surgeries utilizing world-class technology to
+                preserve and restore your vision.</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="responsive-grid">
+            <div class="service-card fade-in">
+                <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&q=80&w=600"
+                    alt="Cataract Treatment" class="service-img">
+                <div class="service-content">
+                    <h3>Cataract Treatment</h3>
+                    <p>Advanced micro-incision cataract surgery with premium intraocular lens implants.</p>
+                    <ul class="service-features">
+                        <li>Painless procedure</li>
+                        <li>Quick recovery time</li>
+                        <li>Premium multifocal lenses</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card fade-in">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600"
+                    alt="LASIK" class="service-img">
+                <div class="service-content">
+                    <h3>LASIK Surgery</h3>
+                    <p>Blade-free laser vision correction to safely reduce or eliminate dependence on glasses.</p>
+                    <ul class="service-features">
+                        <li>100% Blade-free</li>
+                        <li>Customized topography</li>
+                        <li>Fast visual recovery</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card fade-in">
+                <img src="https://images.pexels.com/photos/12104186/pexels-photo-12104186.jpeg" alt="Glaucoma"
+                    class="service-img">
+                <div class="service-content">
+                    <h3>Glaucoma Care</h3>
+                    <p>Early detection and management of glaucoma using advanced eye pressure screening.</p>
+                    <ul class="service-features">
+                        <li>Visual field testing</li>
+                        <li>Laser therapy options</li>
+                        <li>Surgical interventions</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card fade-in">
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600"
+                    alt="Retina Care" class="service-img">
+                <div class="service-content">
+                    <h3>Retina & Macula</h3>
+                    <p>Expert care for diabetic retinopathy, macular degeneration, and retinal detachments.</p>
+                    <ul class="service-features">
+                        <li>OCT Imaging</li>
+                        <li>Intravitreal injections</li>
+                        <li>Vitreoretinal surgery</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card fade-in">
+                <img src="https://images.pexels.com/photos/25070796/pexels-photo-25070796.jpeg" alt="Cornea Care"
+                    class="service-img">
+                <div class="service-content">
+                    <h3>Cornea & Dry Eye</h3>
+                    <p>Advanced diagnostic and therapeutic options for corneal disease and severe dry eye.</p>
+                    <ul class="service-features">
+                        <li>Corneal transplants</li>
+                        <li>Dry eye management</li>
+                        <li>Keratoconus treatment</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card fade-in">
+                <img src="https://images.pexels.com/photos/5621859/pexels-photo-5621859.jpeg" alt="Pediatric Eye Care"
+                    class="service-img">
+                <div class="service-content">
+                    <h3>Pediatric Eye Care</h3>
+                    <p>Specialized ophthalmic care tailored for children, including strabismus and myopia.</p>
+                    <ul class="service-features">
+                        <li>Squint correction</li>
+                        <li>Myopia control</li>
+                        <li>Lazy eye treatment</li>
+                    </ul>
+                    <a href="book.html" class="btn btn-outline" style="width:100%; margin-top:10px;">Book
+                        Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find the Right Eye Care for You -->
+    <section class="find-care-section"
+        style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container text-center fade-in">
+            <h2 class="section-title" style="color: white;">Find the Right Eye Care for You</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">Not sure which
+                service you need? Use our quick guide to find the right specialist.</p>
+            <div
+                class="responsive-grid">
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Blurry Vision?</h3>
+                    <p>Might be time for a Refractive or Cataract consultation.</p>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Child's Eye Health?</h3>
+                    <p>Our Pediatric Ophthalmology team is here to help.</p>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
+                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Flashes or Floaters?</h3>
+                    <p>Seek immediate evaluation from our Retina Specialists.</p>
+                </div>
+            </div>
+            <a href="book.html" class="btn"
+                style="background-color: var(--accent-color); color: white; margin-top: var(--spacing-xl); display: inline-block;">Book
+                a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Our Patient Care Process -->
+    <section class="care-process-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title text-center fade-in">Our Patient Care Process</h2>
+            <div
+                style="display: flex; flex-direction: column; gap: var(--spacing-md); max-width: 800px; margin: var(--spacing-xl) auto 0;">
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
+                    <div
+                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                        1</div>
+                    <div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Initial Consultation</h4>
+                        <p style="color: var(--text-dark); margin: 0;">Meet with our specialists to discuss your
+                            symptoms and medical history.</p>
+                    </div>
+                </div>
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
+                    <div
+                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                        2</div>
+                    <div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Comprehensive Diagnostics</h4>
+                        <p style="color: var(--text-dark); margin: 0;">Undergo advanced testing for accurate and precise
+                            diagnosis.</p>
+                    </div>
+                </div>
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
+                    <div
+                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                        3</div>
+                    <div>
+                        <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Personalized Treatment</h4>
+                        <p style="color: var(--text-dark); margin: 0;">Receive a tailored treatment plan designed for
+                            optimal visual outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

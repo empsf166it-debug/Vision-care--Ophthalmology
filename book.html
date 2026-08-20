@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | VisionCare Eye Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .booking-container {
+            max-width: 800px;
+            margin: var(--spacing-xxl) auto;
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-xl);
+            border: 1px solid var(--border-color);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--spacing-md);
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-dark);
+        }
+        .form-control {
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+        }
+        
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: var(--spacing-xl);
+            background: rgba(42, 157, 143, 0.1);
+            border-radius: var(--border-radius-lg);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+        .success-message h2 {
+            color: var(--success);
+        }
+
+        @media (max-width: 768px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .booking-container { padding: var(--spacing-lg); }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+    
+
+        <!-- Centralized Components -->
+    <script src="js/components.js"></script>
+
+    <div class="container">
+        <div class="booking-container fade-in">
+            
+            <div id="booking-form-wrapper">
+                <h1 class="section-title text-center" style="margin-bottom: 5px;">Book an Appointment</h1>
+                <p class="text-center" style="color: var(--text-light); margin-bottom: var(--spacing-lg);">Schedule your visit with our eye care specialists.</p>
+                
+                <form id="appointmentForm" onsubmit="return handleBooking(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fname">First Name *</label>
+                            <input type="text" id="fname" class="form-control" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name *</label>
+                            <input type="text" id="lname" class="form-control" required placeholder="Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="+1 (555) 000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Select Department *</label>
+                            <select id="department" class="form-control" required>
+                                <option value="" disabled selected>Choose Department</option>
+                                <option value="cataract">Cataract Department</option>
+                                <option value="lasik">LASIK & Refractive</option>
+                                <option value="retina">Retina & Macula</option>
+                                <option value="glaucoma">Glaucoma</option>
+                                <option value="pediatric">Pediatric Ophthalmology</option>
+                                <option value="general">General Eye Checkup</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">Preferred Doctor (Optional)</label>
+                            <select id="doctor" class="form-control">
+                                <option value="any">No Preference</option>
+                                <option value="dr-johnson">Dr. Sarah Johnson</option>
+                                <option value="dr-chen">Dr. Michael Chen</option>
+                                <option value="dr-davis">Dr. Emily Davis</option>
+                                <option value="dr-wilson">Dr. Robert Wilson</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" class="form-control" required>
+                                <option value="" disabled selected>Choose Time</option>
+                                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                                <option value="evening">Evening (4:00 PM - 6:00 PM)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea id="reason" class="form-control" rows="4" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem; margin-top: var(--spacing-md);">Confirm Appointment Request</button>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="success-message">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 20px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <h2>Request Submitted Successfully!</h2>
+                <p style="margin-top: 10px; color: var(--text-dark);">Thank you for choosing VisionCare. Our reception team will contact you shortly to confirm your appointment time.</p>
+                <button onclick="window.location.reload()" class="btn btn-outline" style="margin-top: 20px;">Book Another Appointment</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Accepted Insurances -->
+    <section class="insurances-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
+        <div class="container text-center fade-in">
+            <h2 class="section-title" style="color: white;">Accepted Insurances</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">We work with major insurance providers to ensure you receive the care you need. Please bring your insurance card to your appointment.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-md);">
+                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Medicare</div>
+                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">BlueCross</div>
+                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Aetna</div>
+                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Cigna</div>
+                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">UnitedHealthcare</div>
+            </div>
+            <p style="margin-top: var(--spacing-lg); font-size: 0.9rem; color: rgba(255,255,255,0.6);">Don't see your provider? Contact our billing department to verify coverage.</p>
+        </div>
+    </section>
+
+    <!-- Need Immediate Help? -->
+    <section class="immediate-help-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+        <div class="container fade-in">
+            <div style="background: var(--bg-white); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid var(--error);">
+                <h2 style="color: var(--primary-dark); margin-bottom: 10px;">Need Immediate Help?</h2>
+                <p style="color: var(--text-dark); max-width: 600px; margin: 0 auto var(--spacing-lg);">If you are experiencing a sudden loss of vision, severe eye pain, or have suffered an eye injury, please do not use this online booking form.</p>
+                <div style="display: inline-flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <span style="font-weight: bold; color: var(--text-dark);">Call our 24/7 Emergency Line:</span>
+                    <a href="tel:+18001234567" class="btn" style="background-color: var(--error); color: white; border: none;">1-800-123-4567</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    
+
+    <script src="js/main.js"></script>
+    <script>
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const fname = document.getElementById('fname').value;
+            const phone = document.getElementById('phone').value;
+            
+            if(fname && phone) {
+                // Simulate API call and show success state
+                document.getElementById('booking-form-wrapper').style.display = 'none';
+                
+                const successMsg = document.getElementById('success-message');
+                successMsg.style.display = 'block';
+                // Trigger reflow for animation
+                void successMsg.offsetWidth; 
+                successMsg.classList.add('fade-in', 'visible');
+            }
+            
+            return false;
+        }
+    </script>
+</body>
+</html>
+
