@@ -66,14 +66,17 @@
             <h2 class="section-title text-center fade-in">Our Hospital Facilities</h2>
             <div class="responsive-grid">
                 <div class="fade-in" style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); text-align: center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                     <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Advanced Operation Theaters</h3>
                     <p style="color: var(--text-dark);">Equipped with state-of-the-art surgical technology for precise interventions.</p>
                 </div>
                 <div class="fade-in" style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); text-align: center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                     <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Comfortable Patient Wards</h3>
                     <p style="color: var(--text-dark);">Designed for patient comfort and fast recovery with 24/7 dedicated nursing staff.</p>
                 </div>
                 <div class="fade-in" style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); text-align: center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <h3 style="color: var(--primary-dark); margin-bottom: 10px;">Diagnostic Center</h3>
                     <p style="color: var(--text-dark);">Comprehensive diagnostic suite for accurate and early disease detection.</p>
                 </div>
@@ -82,25 +85,64 @@
     </section>
 
     <!-- Milestones Section -->
+    <style>
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+            width: 100%;
+        }
+        .milestone-number {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--primary-light);
+        }
+        .milestone-title {
+            font-weight: 600;
+        }
+        /* Dark Theme adjustments */
+        [data-theme='dark'] .milestones-section {
+            color: var(--bg-light);
+        }
+        [data-theme='dark'] .milestones-section h2,
+        [data-theme='dark'] .milestone-title {
+            color: var(--bg-white);
+        }
+        [data-theme='dark'] .milestone-number {
+            color: var(--text-dark);
+        }
+        
+        @media (max-width: 900px) {
+            .milestones-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .milestones-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
     <section class="milestones-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container text-center fade-in">
-            <h2 class="section-title" style="color: white;">VisionCare Milestones & Achievements</h2>
-            <div class="responsive-grid">
+            <h2 class="section-title" style="color: inherit;">VisionCare Milestones & Achievements</h2>
+            <div class="milestones-grid">
                 <div>
-                    <h3 style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-light);">2005</h3>
-                    <p style="font-weight: 600;">Established</p>
+                    <h3 class="milestone-number">2005</h3>
+                    <p class="milestone-title">Established</p>
                 </div>
                 <div>
-                    <h3 style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-light);">50k+</h3>
-                    <p style="font-weight: 600;">Surgeries Performed</p>
+                    <h3 class="milestone-number">50k+</h3>
+                    <p class="milestone-title">Surgeries Performed</p>
                 </div>
                 <div>
-                    <h3 style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-light);">20+</h3>
-                    <p style="font-weight: 600;">Expert Specialists</p>
+                    <h3 class="milestone-number">20+</h3>
+                    <p class="milestone-title">Expert Specialists</p>
                 </div>
                 <div>
-                    <h3 style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-light);">1M+</h3>
-                    <p style="font-weight: 600;">Happy Patients</p>
+                    <h3 class="milestone-number">1M+</h3>
+                    <p class="milestone-title">Happy Patients</p>
                 </div>
             </div>
         </div>

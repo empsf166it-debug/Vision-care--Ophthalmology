@@ -19,7 +19,7 @@
 
         .diagnostics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
             gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
         }
@@ -77,6 +77,38 @@
             font-weight: 600;
             margin-bottom: var(--spacing-sm);
             align-self: flex-start;
+        }
+
+        /* Dark Theme Fixes */
+        [data-theme='dark'] .diag-tag {
+            color: #000;
+        }
+        
+        .tech-card {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .tech-card h3 {
+            color: var(--primary-light);
+            margin-bottom: 10px;
+        }
+        .tech-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        [data-theme='dark'] .diagnostic-tech-section,
+        [data-theme='dark'] .diagnostic-tech-section h2,
+        [data-theme='dark'] .diagnostic-tech-section p,
+        [data-theme='dark'] .tech-card h3,
+        [data-theme='dark'] .tech-card p {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .tech-card {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -177,20 +209,17 @@
             <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">We invest in
                 the latest ophthalmic imaging technology to provide unparalleled accuracy in our diagnoses.</p>
             <div class="responsive-grid">
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">OCT Angiography</h3>
-                    <p style="font-size: 0.9rem;">Non-invasive 3D imaging of retinal blood vessels.</p>
+                <div class="tech-card">
+                    <h3>OCT Angiography</h3>
+                    <p>Non-invasive 3D imaging of retinal blood vessels.</p>
                 </div>
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Pentacam HR</h3>
-                    <p style="font-size: 0.9rem;">High-resolution imaging for precise corneal topography.</p>
+                <div class="tech-card">
+                    <h3>Pentacam HR</h3>
+                    <p>High-resolution imaging for precise corneal topography.</p>
                 </div>
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Visual Field Analyzer</h3>
-                    <p style="font-size: 0.9rem;">Advanced testing for glaucoma and neurological conditions.</p>
+                <div class="tech-card">
+                    <h3>Visual Field Analyzer</h3>
+                    <p>Advanced testing for glaucoma and neurological conditions.</p>
                 </div>
             </div>
         </div>

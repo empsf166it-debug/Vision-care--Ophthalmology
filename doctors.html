@@ -182,7 +182,7 @@
 
             <!-- Doctor 5 -->
             <div class="doc-card fade-in" data-category="cataract">
-                <img src="https://images.unsplash.com/photo-1582750433449-648ed127d0fc?auto=format&fit=crop&q=80&w=400" alt="Dr. James Smith" class="doc-img">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Dr. James Smith" class="doc-img">
                 <div class="doc-content">
                     <h3 class="doc-name">Dr. James Smith</h3>
                     <div class="doc-specialty">Cornea & Refractive Surgeon</div>
@@ -197,7 +197,7 @@
 
             <!-- Doctor 6 -->
             <div class="doc-card fade-in" data-category="retina">
-                <img src="https://images.unsplash.com/photo-1594824436998-d40d9af77840?auto=format&fit=crop&q=80&w=400" alt="Dr. Linda Martinez" class="doc-img" onerror="this.src='https://images.unsplash.com/photo-1590611936760-eeb9bcabe24c?auto=format&fit=crop&q=80&w=400';">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Dr. Linda Martinez" class="doc-img">
                 <div class="doc-content">
                     <h3 class="doc-name">Dr. Linda Martinez</h3>
                     <div class="doc-specialty">Medical Retina Specialist</div>
@@ -235,21 +235,49 @@
     </section>
 
     <!-- Doctor Consultation Process -->
+    <style>
+        .consultation-card {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .consultation-card h3 {
+            color: var(--primary-light);
+            margin-bottom: 15px;
+        }
+        .consultation-card p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+        
+        /* Dark Theme Fixes */
+        [data-theme='dark'] .consultation-process-section,
+        [data-theme='dark'] .consultation-process-section h2,
+        [data-theme='dark'] .consultation-card h3,
+        [data-theme='dark'] .consultation-card p {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .consultation-card {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
     <section class="consultation-process-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container fade-in">
-            <h2 class="section-title text-center" style="color: white;">Doctor Consultation Process</h2>
+            <h2 class="section-title text-center" style="color: inherit;">Doctor Consultation Process</h2>
             <div class="responsive-grid">
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">1. Medical History</h3>
-                    <p style="color: rgba(255,255,255,0.8);">Your doctor will thoroughly review your complete medical history and current symptoms.</p>
+                <div class="consultation-card">
+                    <h3>1. Medical History</h3>
+                    <p>Your doctor will thoroughly review your complete medical history and current symptoms.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">2. Comprehensive Exam</h3>
-                    <p style="color: rgba(255,255,255,0.8);">A detailed physical examination of your eyes using our state-of-the-art diagnostic equipment.</p>
+                <div class="consultation-card">
+                    <h3>2. Comprehensive Exam</h3>
+                    <p>A detailed physical examination of your eyes using our state-of-the-art diagnostic equipment.</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 15px;">3. Care Plan</h3>
-                    <p style="color: rgba(255,255,255,0.8);">You will receive a detailed explanation of your condition and a personalized treatment strategy.</p>
+                <div class="consultation-card">
+                    <h3>3. Care Plan</h3>
+                    <p>You will receive a detailed explanation of your condition and a personalized treatment strategy.</p>
                 </div>
             </div>
         </div>

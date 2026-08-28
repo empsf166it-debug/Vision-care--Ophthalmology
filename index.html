@@ -166,6 +166,17 @@
             .hero-btns {
                 flex-direction: column;
             }
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-content {
+                max-width: 100% !important;
+            }
+            .hero-image {
+                margin-top: 2rem;
+            }
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -177,8 +188,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+            <div class="hero-content fade-in" style="flex: 1; max-width: 600px;">
                 <h1>Clearer Vision. Better Life.</h1>
                 <p>Experience world-class eye care with our team of specialized ophthalmologists and state-of-the-art
                     technology.</p>
@@ -189,6 +200,9 @@
                 <div class="emergency-contact">
                     <span>🚨 Emergency: +1 (800) 123-4567</span>
                 </div>
+            </div>
+            <div class="hero-image fade-in" style="flex: 1;">
+                <img src="https://images.pexels.com/photos/31000573/pexels-photo-31000573.jpeg" alt="Eye Care Professionals" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
             </div>
         </div>
     </section>
@@ -306,6 +320,47 @@
         </div>
     </section>
 
+    <!-- Global Testimonials Section -->
+    <section class="testimonials-section" style="background-color: var(--bg-light); padding: var(--spacing-xxl) 0;">
+        <div class="container">
+            <h2 class="section-title text-center fade-in">What Our Patients Say</h2>
+            <div
+                class="responsive-grid">
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"The LASIK procedure
+                        was quick and completely painless. I can't believe I have 20/20 vision now. Thank you
+                        VisionCare!"</p>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 15px;">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily R." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <h4 style="color: var(--primary-dark); margin: 0;">- Emily R.</h4>
+                    </div>
+                </div>
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"Dr. Chen and the
+                        retina team saved my sight. Their advanced technology and compassionate care are unmatched."</p>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 15px;">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="James T." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <h4 style="color: var(--primary-dark); margin: 0;">- James T.</h4>
+                    </div>
+                </div>
+                <div class="fade-in"
+                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"My mother's cataract
+                        surgery went flawlessly. The facility is spotless and the staff is incredibly professional."</p>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 15px;">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Sarah M." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <h4 style="color: var(--primary-dark); margin: 0;">- Sarah M.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Global Newsletter Section -->
     <section class="newsletter-section"
         style="background-color: var(--primary-dark); color: white; padding: var(--spacing-xxl) 0;">
@@ -322,38 +377,6 @@
                 <button type="submit" class="btn"
                     style="background-color: var(--accent-color); color: white;">Subscribe</button>
             </form>
-        </div>
-    </section>
-
-    <!-- Global Testimonials Section -->
-    <section class="testimonials-section" style="background-color: var(--bg-light); padding: var(--spacing-xxl) 0;">
-        <div class="container">
-            <h2 class="section-title text-center fade-in">What Our Patients Say</h2>
-            <div
-                class="responsive-grid">
-                <div class="fade-in"
-                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
-                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"The LASIK procedure
-                        was quick and completely painless. I can't believe I have 20/20 vision now. Thank you
-                        VisionCare!"</p>
-                    <h4 style="color: var(--primary-dark);">- Emily R.</h4>
-                </div>
-                <div class="fade-in"
-                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
-                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"Dr. Chen and the
-                        retina team saved my sight. Their advanced technology and compassionate care are unmatched."</p>
-                    <h4 style="color: var(--primary-dark);">- James T.</h4>
-                </div>
-                <div class="fade-in"
-                    style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
-                    <div style="color: #fb8500; margin-bottom: 10px;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 15px; color: var(--text-dark);">"My mother's cataract
-                        surgery went flawlessly. The facility is spotless and the staff is incredibly professional."</p>
-                    <h4 style="color: var(--primary-dark);">- Sarah M.</h4>
-                </div>
-            </div>
         </div>
     </section>
 

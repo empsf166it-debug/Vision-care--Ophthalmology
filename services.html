@@ -93,8 +93,9 @@
         </div>
     </div>
 
-    <section class="container">
-        <div class="responsive-grid">
+    <section>
+        <div class="container">
+            <div class="responsive-grid">
             <div class="service-card fade-in">
                 <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&q=80&w=600"
                     alt="Cataract Treatment" class="service-img">
@@ -190,31 +191,63 @@
                         Consultation</a>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Find the Right Eye Care for You -->
+    <style>
+        .care-card {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+        .care-card h3 {
+            color: var(--primary-light);
+            margin-bottom: 10px;
+        }
+        .care-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Dark Theme Fixes for this section */
+        [data-theme='dark'] .find-care-section,
+        [data-theme='dark'] .find-care-section h2,
+        [data-theme='dark'] .find-care-section p,
+        [data-theme='dark'] .care-card h3 {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .care-card {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        [data-theme='dark'] .care-card:hover {
+            background: rgba(0,0,0,0.1);
+        }
+    </style>
     <section class="find-care-section"
         style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container text-center fade-in">
-            <h2 class="section-title" style="color: white;">Find the Right Eye Care for You</h2>
+            <h2 class="section-title" style="color: inherit;">Find the Right Eye Care for You</h2>
             <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">Not sure which
                 service you need? Use our quick guide to find the right specialist.</p>
             <div
                 class="responsive-grid">
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Blurry Vision?</h3>
+                <div class="care-card">
+                    <h3>Blurry Vision?</h3>
                     <p>Might be time for a Refractive or Cataract consultation.</p>
                 </div>
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Child's Eye Health?</h3>
+                <div class="care-card">
+                    <h3>Child's Eye Health?</h3>
                     <p>Our Pediatric Ophthalmology team is here to help.</p>
                 </div>
-                <div
-                    style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Flashes or Floaters?</h3>
+                <div class="care-card">
+                    <h3>Flashes or Floaters?</h3>
                     <p>Seek immediate evaluation from our Retina Specialists.</p>
                 </div>
             </div>
@@ -225,6 +258,24 @@
     </section>
 
     <!-- Our Patient Care Process -->
+    <style>
+        .process-number {
+            background: var(--primary-light);
+            color: #023e8a; /* Dark blue for high contrast in light mode */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+        [data-theme='dark'] .process-number {
+            color: #000; /* Black for high contrast in dark mode */
+        }
+    </style>
     <section class="care-process-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
         <div class="container">
             <h2 class="section-title text-center fade-in">Our Patient Care Process</h2>
@@ -232,8 +283,7 @@
                 style="display: flex; flex-direction: column; gap: var(--spacing-md); max-width: 800px; margin: var(--spacing-xl) auto 0;">
                 <div class="fade-in"
                     style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
-                    <div
-                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                    <div class="process-number">
                         1</div>
                     <div>
                         <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Initial Consultation</h4>
@@ -243,8 +293,7 @@
                 </div>
                 <div class="fade-in"
                     style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
-                    <div
-                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                    <div class="process-number">
                         2</div>
                     <div>
                         <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Comprehensive Diagnostics</h4>
@@ -254,8 +303,7 @@
                 </div>
                 <div class="fade-in"
                     style="background: var(--bg-white); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--spacing-md);">
-                    <div
-                        style="background: var(--primary-light); color: var(--primary-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
+                    <div class="process-number">
                         3</div>
                     <div>
                         <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Personalized Treatment</h4>

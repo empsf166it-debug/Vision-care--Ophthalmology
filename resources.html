@@ -44,7 +44,7 @@
             background: var(--bg-white);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius-lg);
-            padding: var(--spacing-xl);
+            padding: var(--spacing-lg);
             margin-bottom: var(--spacing-xl);
             box-shadow: var(--shadow-sm);
         }
@@ -86,9 +86,85 @@
         
         @media (max-width: 900px) {
             .resources-layout { grid-template-columns: 1fr; }
-            .resources-nav { position: static; display: flex; flex-wrap: wrap; }
-            .resources-nav a { border-left: none; border-bottom: 3px solid transparent; }
+            .resources-nav { position: static; display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: var(--spacing-md); }
+            .resources-nav a { border-left: none; border-bottom: 3px solid transparent; padding: 8px 12px; }
             .resources-nav a:hover, .resources-nav a.active { border-left-color: transparent; border-bottom-color: var(--primary-color); }
+            .resource-section { padding: var(--spacing-md); }
+        }
+        
+        .faq-dropdown {
+            background: var(--bg-white);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--accent-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .faq-dropdown summary {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-dropdown summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-dropdown summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        .faq-dropdown[open] summary::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+        .faq-dropdown p {
+            color: var(--text-dark);
+            margin: var(--spacing-md) 0 0 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .guideline-card {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .guideline-card h3 {
+            color: var(--primary-light);
+            margin-bottom: 10px;
+        }
+        .guideline-card p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 15px;
+        }
+        .guideline-card a {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        /* Dark Theme Fixes for Patient Guidelines */
+        [data-theme='dark'] .patient-guidelines-section,
+        [data-theme='dark'] .patient-guidelines-section h2 {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .guideline-card {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        [data-theme='dark'] .guideline-card h3,
+        [data-theme='dark'] .guideline-card p,
+        [data-theme='dark'] .guideline-card a {
+            color: var(--bg-light) !important;
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -167,31 +243,6 @@
                         <li>Please call our billing department at +1 (800) 123-4567 for specific coverage inquiries.</li>
                     </ul>
                 </div>
-
-                <div id="faq" class="resource-section fade-in">
-                    <h2>Frequently Asked Questions (FAQ)</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-q">How long does a comprehensive eye exam take?</div>
-                        <div class="faq-a">A comprehensive exam usually takes between 45 minutes to 1.5 hours, depending on whether your eyes need to be dilated.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-q">Is cataract surgery painful?</div>
-                        <div class="faq-a">No. The procedure is performed under local anesthesia (numbing drops). You may feel mild pressure, but it is not painful.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-q">Can I drive myself home after dilation?</div>
-                        <div class="faq-a">Dilation makes your eyes sensitive to light and blurs near vision for 2-4 hours. We strongly recommend having someone drive you home.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-q">How soon can I return to work after LASIK?</div>
-                        <div class="faq-a">Most patients achieve excellent vision within 24 hours and can return to work the very next day.</div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -199,44 +250,44 @@
     <!-- Essential Patient Guidelines -->
     <section class="patient-guidelines-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container fade-in">
-            <h2 class="section-title text-center" style="color: white;">Essential Patient Guidelines</h2>
+            <h2 class="section-title text-center" style="color: inherit;">Essential Patient Guidelines</h2>
             <div class="responsive-grid">
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Pre-Op Instructions</h3>
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">Important steps to take before your scheduled surgery.</p>
-                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                <div class="guideline-card">
+                    <h3>Pre-Op Instructions</h3>
+                    <p>Important steps to take before your scheduled surgery.</p>
+                    <a href="#">Download PDF</a>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">Post-Op Care Guide</h3>
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">How to ensure a smooth and safe recovery process.</p>
-                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                <div class="guideline-card">
+                    <h3>Post-Op Care Guide</h3>
+                    <p>How to ensure a smooth and safe recovery process.</p>
+                    <a href="#">Download PDF</a>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); border: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: var(--primary-light); margin-bottom: 10px;">New Patient Forms</h3>
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 15px;">Save time by filling out your history forms in advance.</p>
-                    <a href="#" style="color: var(--primary-light); text-decoration: underline;">Download PDF</a>
+                <div class="guideline-card">
+                    <h3>New Patient Forms</h3>
+                    <p>Save time by filling out your history forms in advance.</p>
+                    <a href="#">Download PDF</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Frequently Asked Questions -->
-    <section class="faq-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
+    <section id="faq" class="faq-section" style="padding: var(--spacing-xxl) 0; background-color: var(--bg-light);">
         <div class="container fade-in">
             <h2 class="section-title text-center">Frequently Asked Questions</h2>
             <div style="max-width: 800px; margin: var(--spacing-xl) auto 0; display: flex; flex-direction: column; gap: var(--spacing-md);">
-                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
-                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Do I need a referral to book an appointment?</h4>
-                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">No, you can book an appointment directly. However, if you're using insurance, please check your provider's requirements.</p>
-                </div>
-                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
-                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">How long does a comprehensive eye exam take?</h4>
-                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">Please allow 1 to 1.5 hours for a comprehensive exam, as we may need to dilate your pupils.</p>
-                </div>
-                <div style="background: var(--bg-white); padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent-color);">
-                    <h4 style="color: var(--primary-dark); margin-bottom: 5px;">Will I be able to drive after my appointment?</h4>
-                    <p style="color: var(--text-dark); margin: 0; font-size: 0.95rem;">If your eyes are dilated during the exam, your vision will be blurry and light-sensitive. We strongly recommend having someone drive you home.</p>
-                </div>
+                <details class="faq-dropdown">
+                    <summary>Do I need a referral to book an appointment?</summary>
+                    <p>No, you can book an appointment directly. However, if you're using insurance, please check your provider's requirements.</p>
+                </details>
+                <details class="faq-dropdown">
+                    <summary>How long does a comprehensive eye exam take?</summary>
+                    <p>Please allow 1 to 1.5 hours for a comprehensive exam, as we may need to dilate your pupils.</p>
+                </details>
+                <details class="faq-dropdown">
+                    <summary>Will I be able to drive after my appointment?</summary>
+                    <p>If your eyes are dilated during the exam, your vision will be blurry and light-sensitive. We strongly recommend having someone drive you home.</p>
+                </details>
             </div>
         </div>
     </section>

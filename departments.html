@@ -15,7 +15,7 @@
         }
         .departments-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
             gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
         }
@@ -156,18 +156,42 @@
     </section>
 
     <!-- Specialized Care Pathway -->
+    <style>
+        .pathway-pill {
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .pathway-arrow {
+            color: var(--primary-light);
+        }
+        
+        /* Dark Theme Fixes */
+        [data-theme='dark'] .care-pathway-section,
+        [data-theme='dark'] .care-pathway-section h2,
+        [data-theme='dark'] .care-pathway-section p,
+        [data-theme='dark'] .pathway-pill,
+        [data-theme='dark'] .pathway-arrow {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .pathway-pill {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
     <section class="care-pathway-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container text-center fade-in">
-            <h2 class="section-title" style="color: white;">Specialized Care Pathway</h2>
+            <h2 class="section-title" style="color: inherit;">Specialized Care Pathway</h2>
             <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">Our departments work seamlessly together to provide comprehensive, multi-disciplinary care for complex eye conditions.</p>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-md); align-items: center;">
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">General OPD</div>
-                <div style="color: var(--primary-light);">→</div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Diagnostic Imaging</div>
-                <div style="color: var(--primary-light);">→</div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Specialty Department</div>
-                <div style="color: var(--primary-light);">→</div>
-                <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-md) var(--spacing-lg); border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">Surgical & Recovery Team</div>
+                <div class="pathway-pill">General OPD</div>
+                <div class="pathway-arrow">→</div>
+                <div class="pathway-pill">Diagnostic Imaging</div>
+                <div class="pathway-arrow">→</div>
+                <div class="pathway-pill">Specialty Department</div>
+                <div class="pathway-arrow">→</div>
+                <div class="pathway-pill">Surgical & Recovery Team</div>
             </div>
         </div>
     </section>

@@ -77,12 +77,16 @@
         <!-- Centralized Components -->
     <script src="js/components.js"></script>
 
-    <div class="container">
+    <!-- Page Header -->
+    <div class="page-header" style="background-color: var(--primary-dark); color: white; padding: var(--spacing-xxl) 0; text-align: center;">
+        <h1 style="color: white; margin-bottom: 10px;">Book an Appointment</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">Schedule your visit with our eye care specialists</p>
+    </div>
+
+    <div class="container" style="margin-top: -40px; position: relative; z-index: 10;">
         <div class="booking-container fade-in">
             
             <div id="booking-form-wrapper">
-                <h1 class="section-title text-center" style="margin-bottom: 5px;">Book an Appointment</h1>
-                <p class="text-center" style="color: var(--text-light); margin-bottom: var(--spacing-lg);">Schedule your visit with our eye care specialists.</p>
                 
                 <form id="appointmentForm" onsubmit="return handleBooking(event)">
                     <div class="form-grid">
@@ -163,16 +167,37 @@
     </section>
 
     <!-- Accepted Insurances -->
+    <style>
+        .insurance-pill {
+            background: var(--bg-white);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            color: var(--text-dark);
+            font-weight: bold;
+        }
+        
+        /* Dark Theme Fixes */
+        [data-theme='dark'] .insurances-section,
+        [data-theme='dark'] .insurances-section h2,
+        [data-theme='dark'] .insurances-section p,
+        [data-theme='dark'] .insurance-pill {
+            color: var(--bg-light) !important;
+        }
+        [data-theme='dark'] .insurance-pill {
+            background: rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
     <section class="insurances-section" style="padding: var(--spacing-xxl) 0; background-color: var(--primary-dark); color: white;">
         <div class="container text-center fade-in">
-            <h2 class="section-title" style="color: white;">Accepted Insurances</h2>
+            <h2 class="section-title" style="color: inherit;">Accepted Insurances</h2>
             <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto var(--spacing-xl);">We work with major insurance providers to ensure you receive the care you need. Please bring your insurance card to your appointment.</p>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-md);">
-                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Medicare</div>
-                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">BlueCross</div>
-                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Aetna</div>
-                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">Cigna</div>
-                <div style="background: white; padding: 10px 20px; border-radius: var(--border-radius); color: var(--text-dark); font-weight: bold;">UnitedHealthcare</div>
+                <div class="insurance-pill">Medicare</div>
+                <div class="insurance-pill">BlueCross</div>
+                <div class="insurance-pill">Aetna</div>
+                <div class="insurance-pill">Cigna</div>
+                <div class="insurance-pill">UnitedHealthcare</div>
             </div>
             <p style="margin-top: var(--spacing-lg); font-size: 0.9rem; color: rgba(255,255,255,0.6);">Don't see your provider? Contact our billing department to verify coverage.</p>
         </div>
