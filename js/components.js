@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <header class="header">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="VisionCare" style="height: 48px; width: auto; object-fit: contain;">
+                <img src="images/logo.png" alt="VisionCare" style="height: 32px; width: auto; object-fit: contain;">
             </a>
             <nav>
                 <ul class="nav-links">
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 20px;">
-                        <img src="images/logo.png" alt="VisionCare" style="height: 48px; width: auto; object-fit: contain;">
+                        <img src="images/logo.png" alt="VisionCare" style="height: 32px; width: auto; object-fit: contain;">
                     </a>
                     <p style="color: var(--text-light); margin-bottom: 20px;">Dedicated to preserving and enhancing your vision with world-class eye care services and advanced technology.</p>
                     <div style="display: flex; gap: 10px;">
